@@ -132,6 +132,11 @@ float function(float val)
 
    fx = 2 * x - log10f(x) - 7;  // Function Equation
 
+   if(x != x)
+   {
+      printf("Roots are almost equal can't go further.\n");
+      exit (2);
+   }
    return fx;  //Returning the value of f(x) at x1
 }
 

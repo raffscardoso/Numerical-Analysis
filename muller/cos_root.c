@@ -126,6 +126,11 @@ float function(float val)
 
    fx = 3 * x - cosf(x) - 1;  // Function Equation
 
+   if(x != x)
+   {
+      printf("Cannnot proceed further..Try changing the values\n");
+      exit (2);
+   }
    return fx;  //Returning the value of f(x) at x1
 }
 

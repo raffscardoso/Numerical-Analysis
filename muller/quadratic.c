@@ -121,6 +121,11 @@ float function(float co_a, float co_b, float co_c, float val)
 
    fx = (co_a * x * x) + (co_b * x) + co_c;  // Function Equation
 
+   if(x != x)
+   {
+      printf("The answers are almost matching.\n");
+      exit (2);
+   }
    return fx;  //Returning the value of f(x) at x1
 }
 

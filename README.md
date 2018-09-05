@@ -38,5 +38,9 @@ This repository contains some of the algorithms for root finding methods and int
     The program takes coeffients of the equation, their corresponding powers as input and computes the smallest real root for the given polynomial equation using Ramanujan's method.
 
 **Interpolation**
+
 *Lagrange interpolation*
-    This program takes the data-points as input and computes the lagrange's polynomial for n and takes the value at given x and gives the value of f(x).
+    This program takes the data-points as input and computes the lagrange's polynomial for nth order and takes the value at given x and gives the value of f(x).
+
+*Newton divided difference interpolation*
+    This program takes the data-points as input and computes the newton divided differences for nth order and takes the value at given x and gives the value of f(x).

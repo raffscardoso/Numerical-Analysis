@@ -39,8 +39,13 @@ This repository contains some of the algorithms for root finding methods and int
 
 **Interpolation**
 
+In this directory, you can find some algorithm for interpolating the given data-points.
+
 *Lagrange interpolation*
     This program takes the data-points as input and computes the lagrange's polynomial for nth order and takes the value at given x and gives the value of f(x).
 
 *Newton divided difference interpolation*
     This program takes the data-points as input and computes the newton divided differences for nth order and takes the value at given x and gives the value of f(x).
+
+*Iterated interpolation*
+    This program takes the data-points as input and computes the iterated interpolation for nth order and takes the value at given x and gives the value of f(x).

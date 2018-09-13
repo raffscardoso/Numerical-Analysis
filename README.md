@@ -49,3 +49,9 @@ In this directory, you can find some algorithm for interpolating the given data-
 
 *Iterated interpolation*
     This program takes the data-points as input and computes the iterated interpolation for nth order and takes the value at given x and gives the value of f(x).
+
+*Gregory-Newton forward difference interpolation*
+    This program takes the data-points as input and computes the newton divided differences in terms of forward differences for nth order and takes the value at given x and gives the value of f(x).
+
+*Gregory-Newton backward difference interpolation*
+    This program takes the data-points as input and computes the newton divided differences in terms of backward differences for nth order and takes the value at given x and gives the value of f(x). 

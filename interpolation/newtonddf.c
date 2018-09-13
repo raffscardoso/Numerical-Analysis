@@ -1,11 +1,11 @@
-/********** NEWTON'S DIVIDED DIFFERENCE INTERPOLATION POLYNOMIAL **********/
+/********** GREGORY-NEWTON FORWARD DIFFERENCE INTERPOLATION POLYNOMIAL **********/
 
-/* It may also be noted for calculating the higher order divided differences we have used lower order divided differences. In fact starting from the given zeroth order differences.
+/*  Pn(x) = f0 + u(Δf0)/1! + u(u-1)(Δ^2f0)/2! + ........ + u(u-1)(u-2)..(u-n+1)(Δ^nf0)/n!
 
-     f[x0, x1, x2, x3,......., xn] = ∑_{i=0}_{k} (f(xi)/pi1_{j=0}_{k}(xi - xj))
-
-     p(x) = f(x0) + f[x0, x1](x-x0) +........+ f[x0, x1,...,xn](x-x0)(x-x1).....(x-xn)
- */
+         = Σ_{i=0}_{u}*uCi*(Δ^if0)
+         = E^uf0
+    f(x) = (1+Δ)^uf0
+*/
 
 /**************** Input: data-set points *************/
 

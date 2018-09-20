@@ -54,4 +54,15 @@ In this directory, you can find some algorithm for interpolating the given data-
     This program takes the data-points as input and computes the newton divided differences in terms of forward differences for nth order and takes the value at given x and gives the value of f(x).
 
 *Gregory-Newton backward difference interpolation*
-    This program takes the data-points as input and computes the newton divided differences in terms of backward differences for nth order and takes the value at given x and gives the value of f(x). 
+    This program takes the data-points as input and computes the newton divided differences in terms of backward differences for nth order and takes the value at given x and gives the value of f(x).
+
+**Integration**
+
+In this directory, you can find some algorithm for integration when given an interval and the step length of the sub-intervals.
+
+*Simphson's 1/3 rule*
+    This program takes the limits of the interval and computes the integration the given static function using simphson's 1/3 rule.
+
+*Trapezoidal rule*
+    This program takes the limits of the interval and computes the integration t
+he given static function using trapezoidal's rule.

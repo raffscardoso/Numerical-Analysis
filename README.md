@@ -38,6 +38,9 @@ This repository contains some of the algorithms for root finding methods and int
 *Ramanujan method:*
     The program takes coeffients of the equation, their corresponding powers as input and computes the smallest real root for the given polynomial equation using Ramanujan's method.
 
+*Cardano method:*
+    The program takes coeffients of a cubic equation as inputs and computes a real root and a pair of complex roots, this method is similar to the perfect-square method to quadratic equations, is a standard way to find a real root of a cubic equation and one more thing it works only for the cubic equation which has complex roots and a real root.
+
 **Interpolation**
 
 In this directory, you can find some algorithm for interpolating the given data-points.

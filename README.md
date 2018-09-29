@@ -27,7 +27,8 @@ This repository contains some of the algorithms for root finding methods and int
 *Chebyshev method:*
     In this directory, there are algorithms for finding roots for any quadratic equation and some of the of the given transcedental equations using Chebyshev method.
     
-*Horner's method:*
+**Horner's method:**
+
     This is generally called as synthetic division of the polynomial functions, In this directory,
 1. polylinear.c
     The program takes coeffients of the equation, their corresponding powers and a root as the input and computes the root for the given polynomial equation using Horner's method.
@@ -66,3 +67,10 @@ In this directory, you can find some algorithm for integration when given an int
 *Trapezoidal rule*
     This program takes the limits of the interval and computes the integration t
 he given static function using trapezoidal's rule.
+
+**Linear-Equations**
+
+In this directory, you can find some algorithm for solving system of equations.
+
+*Gauss-Elimination*
+    This program takes the co-efficients of x,y,z and constant of 3 system of equation as input and computes the solution.

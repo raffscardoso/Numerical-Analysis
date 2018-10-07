@@ -69,6 +69,17 @@ void gaussjori(float co[MAX][MAX], float ai[MAX][MAX], int n)
 
    for (i = 0; i < n; i++)
    {
+      if (co[i][i] == 0)
+      {
+         printf("The given system of equations have no ");
+         printf("or infinitely many solutions.\n");
+         exit(1);
+      }
+   }
+
+   printf("The inverse of the given matrix is:- \n");
+   for (i = 0; i < n; i++)
+   {
       for (j = 0; j < n; j++)
       {
          ai[i][j] = (ai[i][j]/co[i][i]);  //Normalizing

@@ -104,6 +104,16 @@ void ludecomp(float co[MAX][MAX], float con[MAX], int n)
       }
    }
 
+   for (i = 0; i < n; i++)
+   {
+      if (l[i][i] == 0 || u[i][i] == 0)
+      {
+         printf("The given system of equations have no ");
+         printf("or infinitely many solutions.\n");
+         exit(1);
+      }
+   }
+
    forsub(sol, l, n, con);
    backsub(sol, u, n, sol);
 

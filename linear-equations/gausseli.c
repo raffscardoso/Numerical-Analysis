@@ -80,6 +80,16 @@ void gausseli(float co[MAX][MAX+1], float con[MAX], int n)
       k++;
    }
 
+   for (i = 0; i < n; i++)
+   {
+      if (co[i][i] == 0)
+      {
+         printf("The given system of equations have no ");
+         printf("or infinitely many solutions.\n");
+         exit(1);
+      }
+   }
+
    backsub(sol, co, n);
 
    printf("The solutions of the Equation are:-\n");

@@ -92,6 +92,16 @@ void gaussjor(float co[MAX][MAX+1], float con[MAX], int n)
 
    for (i = 0; i < n; i++)
    {
+      if (co[i][i] == 0)
+      {
+         printf("The given system of equations have no ");
+         printf("or infinitely many solutions.\n");
+         exit(1);
+      }
+   }
+
+   for (i = 0; i < n; i++)
+   {
       sol[i] = co[i][3]/co[i][i];
       printf("Value of x%d is %f\n", i+1, sol[i]);
    }

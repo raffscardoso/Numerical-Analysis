@@ -1,3 +1,16 @@
+/*		GAUSS ELIMINATION 		*/
+
+/* In linear algebra, Gaussian elimination (also known as row reduction) is an algorithm for solving systems of linear equations. It is usually understood as a sequence of operations performed on the corresponding matrix of coefficients. This method can also be used to find the rank of a matrix, to calculate the determinant of a matrix, and to calculate the inverse of an invertible square matrix.
+
+To perform row reduction on a matrix, one uses a sequence of elementary row operations to modify the matrix until the lower left-hand corner of the matrix is filled with zeros, as much as possible. There are three types of elementary row operations: 
+
+1) Swapping two rows,
+2) Multiplying a row by a nonzero number,
+3) Adding a multiple of one row to another row.
+
+   Using these operations, a matrix can always be transformed into an upper triangular matrix, and in fact one that is in row echelon form. */
+
+/*************** PROGRAM STARTS HERE ***************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -7,7 +20,7 @@
 #define MAXC       0
 
 /********* FUNCTION DECLARATION *********/
-void gaussj(float co[MAX][MAX+1], float con[MAX], int n);
+void gausseli(float co[MAX][MAX+1], float con[MAX], int n);
 void backsub(float sol[MAX], float co[MAX][MAX+1], int n);
 
 /********* MAIN STARTS HERE *********/
@@ -34,11 +47,12 @@ int main(void)
       i++;  // Incrementing i
    }
 
-   gaussj(co, con, n);  //Calling function
+   gausseli(co, con, n);  //Calling function
    exit(0);
 }
 
-void gaussj(float co[MAX][MAX+1], float con[MAX], int n)
+/********* FUNCTION DEFINITION *********/
+void gausseli(float co[MAX][MAX+1], float con[MAX], int n)
 {
    int        i, j, k = 0; //Declaration of variables in int
    float      sol[MAX];    //Declaration of arrays in float

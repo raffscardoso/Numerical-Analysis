@@ -86,7 +86,7 @@ void jacobi(float co[MAX][MAX], float con[MAX], float x[MAX], int n)
       {
          x[i] = sol[i];
       }
-
+      check = 0;
       k++;
    }
 

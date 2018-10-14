@@ -5,13 +5,10 @@
 
 /********* DEFINED CONSTANTS *********/
 #define MAX        15
-#define MAXC       0
 
 /********* FUNCTION DECLARATION *********/
-void gausssei(float co[MAX][MAX], float con[MAX], float x[MAX], int n);
-/*void gaussjori(float co[MAX][MAX], float ai[MAX][MAX], int n);
-void matrixm1(float matrix[MAX][MAX], float con[MAX], int n, float mat[MAX]);
-void matrixm(float matrix[][MAX], float con[][MAX], int n, float mat[][MAX]);*/
+void gausssei(float co[][MAX], float con[], float x[], int n);
+void diadomatrix(float matrix[MAX][MAX], int n);
 
 /********* MAIN STARTS HERE *********/
 int main(void)
@@ -38,7 +35,9 @@ int main(void)
       i++;  // Incrementing i
    }
 
-   printf("Enter the guess matrix\n");
+   diadomatrix(co, n);
+
+   printf("Enter the guess values:- \n");
    for (i = 0; i < n; i++)
    {
       printf("Enter value%d: ", i+1);
@@ -54,7 +53,7 @@ void gausssei(float co[MAX][MAX], float con[MAX], float x[MAX], int n)
 {
    int        i, j, check = 0;
    float      val1 = 0, val2 = 0;
-   float      sol[MAX], tmp[MAX];
+   float      sol[MAX];
 
    while (1)
    {
@@ -71,10 +70,15 @@ void gausssei(float co[MAX][MAX], float con[MAX], float x[MAX], int n)
          }
 
          sol[i] = (con[i]-val1-val2)/co[i][i];
+         if (floorf(sol[i]*1000000) == floorf(x[i]*1000000))
+         {
+            check = check + 1;
+         }
+
          val1 = 0, val2 = 0;
       }
 
-      if (floorf(sol[0]*1000000) == floorf(x[0]*1000000))
+      if (check == n)
       {
          break;
       }
@@ -83,12 +87,50 @@ void gausssei(float co[MAX][MAX], float con[MAX], float x[MAX], int n)
       {
          x[i] = sol[i];
       }
+      check = 0;
    }
 
    printf("The solutions of the equations are: \n");
    for (i = 0; i < n; i++)
    {
       printf("Value of x%d is %f\n", i+1, sol[i]);
+   }
+
+   return ;
+}
+
+void diadomatrix(float matrix[MAX][MAX], int n)
+{
+   int        i, j, dd = 0, dd1 = 0;
+   float      val = 0;
+
+   for (i = 0; i < n; i++)
+   {
+      for (j = 0; j < n; j++)
+      {
+         if (i == j)
+         {
+            continue;
+         }
+
+         val += fabsf(matrix[i][j]);
+      }
+      if (fabsf(matrix[i][i]) > val)
+      {
+         dd = dd + 1;
+         dd1 = dd1 + 1;
+      }
+      else if (fabs(matrix[i][i]) == val)
+      {
+         dd1 = dd1 + 1;
+      }
+      val = 0;
+   }
+
+   if (dd != n && dd1 != n)
+   {
+      printf("Roots doesn't converge by this method, they diverge instead.\n");
+      exit(1);
    }
 
    return ;

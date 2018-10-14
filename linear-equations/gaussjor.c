@@ -102,7 +102,7 @@ void gaussjor(float co[MAX][MAX+1], float con[MAX], int n)
 
    for (i = 0; i < n; i++)
    {
-      sol[i] = co[i][3]/co[i][i];
+      sol[i] = co[i][n]/co[i][i];
       printf("Value of x%d is %f\n", i+1, sol[i]);
    }
    return ;

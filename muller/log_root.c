@@ -2,8 +2,8 @@
 
 /********************* Specification: The program takes three approximate root values of the interval as the input and computes the root for the given equation using Muller's method ***********************/
 
-/*************** Given Equation: 2x-log(x)-7 = 0 **************/
-/*************** Roots is: 3.798224 ***************/
+/*************** Given Equation: 3x - cos(x) - 1 = 0 **************/
+/*************** Roots is: 0.608784 ***************/
 
 /*************** In this method, f(x) is approximated by a second degree curve in the vicinity of
 a root. The roots of the quadratic are then assumed to be the approximations to
@@ -36,10 +36,15 @@ int main(int argc, char **argv)
    b = atof(argv[2]);  //Converting arguments
    c = atof(argv[3]);  //Converting arguments
 
-   if ((a <= 0) || (b <= 0) || (c <= 0))
+   if (a * b * c == 0)
    {
-      printf("log(0) is undefined so give a value which is other than zero\n");
+      fprintf(stderr, "log is not defined at 0.\n");
       exit(2);
+   }
+   else if (a < 0 || b < 0 || c < 0)
+   {
+      fprintf(stderr, "log is not defined in the negative region of R.\n");
+      exit(3);
    }
 
    check_bound(a, b, c);  //Calling Function
@@ -47,7 +52,7 @@ int main(int argc, char **argv)
    printf("By using Muller's method: \n");
    printf("The equation is: \n");
    printf("\t");
-   printf("f(x) = 2x-log(x) -7\n");
+   printf("f(x) = 3x - cos(x) - 1\n");
 
    printf("------------------------------\n");
    printf("    f(a)     f(b)      f(c)\n");
@@ -87,12 +92,12 @@ void muller1(float a, float b, float c)
          break;  //Getting out of the loop
       }
 
-      if (fabs(lamda1) > fabs(lamda))
+      if (fabs(lamda1) < fabs(lamda))
       {
          lamda = lamda1;
       }
 
-      xk = c + lamda*(c-b);
+      xk = c + (lamda)*(c-b);
 
       if (isnan(xk))  //Checking whether xk is -nan or not
       {
@@ -130,7 +135,7 @@ float function(float val)
 {
    float        fx, x = val;  //Declaration of variables in float
 
-   fx = 2 * x - log10f(x) - 7;  // Function Equation
+   fx = x * x + 4 * sinf(x);  // Function Equation
 
    return fx;  //Returning the value of f(x) at x1
 }

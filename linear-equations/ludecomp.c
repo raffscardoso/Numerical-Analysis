@@ -43,7 +43,7 @@ int main(void)
          scanf("%f", &co[i][j]);
       }
       printf("Enter the value:- ");
-      scanf("%f", &con[i]);
+      scanf("%f", &con[i]);  //Taking co-efficient matrix as input
       printf("\n");
       i++;  // Incrementing i
    }
@@ -66,7 +66,7 @@ void ludecomp(float co[MAX][MAX], float con[MAX], int n)
       {
          if (i == j)
          {
-            u[i][j] = 1;
+            u[i][j] = 1;  //Diagonal of upper triangular is 1
          }
          else if (i < j)
          {
@@ -106,7 +106,7 @@ void ludecomp(float co[MAX][MAX], float con[MAX], int n)
 
    for (i = 0; i < n; i++)
    {
-      if (l[i][i] == 0 || u[i][i] == 0)
+      if (l[i][i] == 0 || u[i][i] == 0)  //Check condition
       {
          printf("The given system of equations have no ");
          printf("or infinitely many solutions.\n");
@@ -114,8 +114,8 @@ void ludecomp(float co[MAX][MAX], float con[MAX], int n)
       }
    }
 
-   forsub(sol, l, n, con);
-   backsub(sol, u, n, sol);
+   forsub(sol, l, n, con);  //Calling function
+   backsub(sol, u, n, sol); //Calling function
 
    printf("The solutions of the Equation are:-\n");
    for (i = 0; i < n; i++)
@@ -127,8 +127,8 @@ void ludecomp(float co[MAX][MAX], float con[MAX], int n)
 
 void backsub(float sol[MAX], float co[MAX][MAX], int n, float con[MAX])
 {
-   int        i, j;
-   float      val = 0;
+   int        i, j;    //Declaration of variables in int
+   float      val = 0; //Declaration of variables in float
 
    sol[n-1] = con[n-1]/co[n-1][n-1];
    for (i = n-2; i >= 0; i--)
@@ -138,7 +138,7 @@ void backsub(float sol[MAX], float co[MAX][MAX], int n, float con[MAX])
          val += co[i][j]*sol[j];
       }
       sol[i] = (con[i]-val)/co[i][i];
-      val = 0;
+      val = 0;  //Initializing temporary variable to 0
    }
 
    return ;
@@ -146,8 +146,8 @@ void backsub(float sol[MAX], float co[MAX][MAX], int n, float con[MAX])
 
 void forsub(float sol[MAX], float co[MAX][MAX], int n, float z[MAX])
 {
-   int        i, j;
-   float      val = 0;
+   int        i, j;    //Declaration of variables in int
+   float      val = 0; //Declaration of variables in float
 
    sol[0] = z[0]/co[0][0];
    for (i = 1; i < n; i++)
@@ -157,7 +157,7 @@ void forsub(float sol[MAX], float co[MAX][MAX], int n, float z[MAX])
          val += co[i][j]*sol[j];
       }
       sol[i] = (z[i]-val)/co[i][i];
-      val = 0;
+      val = 0;  //Initializing temporary variable to 0
    }
 
    return ;

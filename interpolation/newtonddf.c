@@ -58,7 +58,7 @@ int main(void)
 
       if (i != 0)
       {
-         if (x[i]-x[i-1] != h)
+         if (x[i]-x[i-1] != h)  //Check condition
          {
             fprintf(stderr, "The given points are not equi-spaced.\n");
             exit(1);
@@ -79,7 +79,7 @@ int main(void)
 /********* FUNCTION DEFINITION *********/
 void newtonddf(float x[], float y[], int nitems, float xi, float h)
 {
-   int          i, j, k = 0;           //Declaration of variables in int
+   int          i, j;                  //Declaration of variables in int
    float        pxi = 0, u, val = 1;   //Declaration of variables in float
    float        f[MAX][MAX];           //Decalaration of arrays in float
 

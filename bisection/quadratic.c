@@ -34,7 +34,7 @@ int main(int argc, char **argv)
    co_b = atof(argv[2]);
    co_c = atof(argv[3]);
 
-   val = ((co_b * co_b) - (4 * co_a * co_c)); //Value of discremenet
+   val = ((co_b * co_b) - (4 * co_a * co_c)); //Value of discrimenant
 
    if (val < 0) // Checking whether discriminant < zero
    {

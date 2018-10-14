@@ -1,9 +1,9 @@
 /****************** Usage: For finding the real roots of any given Transcendental equation. ****************************/
 
-/********************* Specification: The program takes coeffients of the equation and upper and lower values of the interval as the input and computes the root for the given equation using Muller's method ***********************/
+/********************* Specification: The program takes coeffients of the equation and three approximate roots as the input and computes the root for the given equation using Muller's method ***********************/
 
 /*************** Given Equation: ax^2 + bx + c = 0**************/
-/*************** Roots is:  ***************/
+/*************** Roots is: Depends on the equation ***************/
 
 /*************** In this method, f(x) is approximated by a second degree curve in the vicinity of
 a root. The roots of the quadratic are then assumed to be the approximations to
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 
    if (argc != 7)  //Verification of arguments
    {
-      fprintf(stderr, "Usage: %s <x_(k-2)> <x_(k-1)> <x_k>\n", argv[0]);
+      fprintf(stderr, "Usage: %s <x^2 coeff> <x coeff> <constant> <x_(k-2)> <x_(k-1)> <x_k>\n", argv[0]);
       exit(1);
    }
 
@@ -93,7 +93,7 @@ void muller1(float co_a, float co_b, float co_c, float a, float b, float c)
          break;  //Getting out of the loop
       }
 
-      if (lamda1 < lamda)
+      if (fabs(lamda1) < fabs(lamda))
       {
          lamda = lamda1;
       }

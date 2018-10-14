@@ -40,10 +40,12 @@ int main(void)
          }
       }
    }
+
    gaussjori(co, ai, n);  //Calling function
    exit(0);
 }
 
+/********* FUNCTION DEFINITION *********/
 void gaussjori(float co[MAX][MAX], float ai[MAX][MAX], int n)
 {
    int        i, j, k = 0; //Declaration of variables in int

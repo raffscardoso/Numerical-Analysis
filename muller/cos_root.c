@@ -59,7 +59,7 @@ void muller1(float a, float b, float c)
 
    h_c = (c - b), h_b = (b - a), lamk = h_c/h_b, sigk = lamk + 1;
 
-   while (i < 10)
+   while (1)
    {
       fa = function(a);  //Calling Functions
       fb = function(b);  //Calling Functions
@@ -81,7 +81,7 @@ void muller1(float a, float b, float c)
          break;  //Getting out of the loop
       }
 
-      if (lamda1 > lamda)
+      if (fabs(lamda1) < fabs(lamda))
       {
          lamda = lamda1;
       }
@@ -126,11 +126,6 @@ float function(float val)
 
    fx = 3 * x - cosf(x) - 1;  // Function Equation
 
-   if(x != x)
-   {
-      printf("Cannnot proceed further..Try changing the values\n");
-      exit (2);
-   }
    return fx;  //Returning the value of f(x) at x1
 }
 

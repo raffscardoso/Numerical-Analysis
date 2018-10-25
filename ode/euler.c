@@ -38,46 +38,46 @@ void euler(float x0, float y0, float delx, int n);
 /********* MAIN STARTS HERE *********/
 int main(int argc, char **argv)
 {
-   float        x0, y0, delx, n;
+   float        x0, y0, delx, n;  //Declaration of variables in float
 
-   if (argc != 5)
+   if (argc != 5)  //Check condition
    {
       fprintf(stderr, "Usage: %s <x0> <y0> <Δx> <no of loops>\n", argv[0]);
       exit(1);
    }
 
-   x0 = atof(argv[1]);
+   x0 = atof(argv[1]);  // Input Section
    y0 = atof(argv[2]);
    delx = atof(argv[3]);
    n = atoi(argv[4]);
 
-   euler(x0, y0, delx, n);
+   euler(x0, y0, delx, n);  //Calling function
    exit(0);
 }
 
 /********* FUNCTION DEFINITION *********/
 void euler(float x0, float y0, float delx, int n)
 {
-   int        i = 0;
-   float      x, y;
+   int        i = 0;  //Declaration of variables in int
+   float      x, y;   //Declaration of variables in float
 
    x = x0, y = y0;
    printf("x%d = %f and y%d = %f\n", i, x0, i, y0);
-   while (i < n)
+   while (i < n)  //Check condition
    {
       y = (y + dybydx(x, y)*delx);
       x = x + delx;
       printf("x%d = %f and y%d = %f\n", i+1, x, i+1, y);
-      i++;
+      i++;  //Incrementing i
    }
 
-   return ;
+   return ;  //returning void
 }
 
 float dybydx(float x, float y)
 {
-   float        fx;
+   float        fx;  //Declaration of variables in float
 
-   fx = x + y;
-   return fx;
+   fx = x + y;  //Equation
+   return fx;  //returning float
 }

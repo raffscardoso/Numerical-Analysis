@@ -86,3 +86,10 @@ In this directory, you can find some algorithm for solving system of equations.
 
 *LU Decomposition:*
     Decomposes the given matrix into lower and upper triangular matrices and finds the solution by backward-subsitution followed by forward-subsitution.
+
+**Ordinary Differential Equations**
+
+In this directory, you can find some algorithms for getting the data-points for some of the Differential Equations.
+
+*Euler Method:*
+    It takes two initial points as input and the value of Δx as input and computes the value at x0+i(Δx), where x0 is the initial point by using euler's method.    NOTE: This method is only used for first order differential equations.

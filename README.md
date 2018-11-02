@@ -94,5 +94,8 @@ In this directory, you can find some algorithms for getting the data-points for 
 *Euler Method:*
     It takes two initial points as input and the value of Δx as input and computes the value at x0+i(Δx), where x0 is the initial point by using euler's method.    NOTE: This method is only used for first order differential equations.
 
+*Improved Euler Method:*
+    The inputs are same as the euler's method but it takes some more iterations to finalize each value at yi to more accurate results simply it follows as a iterative method.
+
 *Runge-kutta Method:*
     The inputs are same as the euler's method in this it computes the function value at each increment based on the slope at different points of the curve.

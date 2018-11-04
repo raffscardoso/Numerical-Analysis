@@ -27,6 +27,7 @@ and a corrector
 /********* FUNCTION DECLARATION *********/
 float dybydx(float x, float y);
 void milnep(float x[], float y[], float delx, int n, float ydash[]);
+void milnec(float x[], float y[], float delx, float ydash[], int n);
 
 /********* MAIN STARTS HERE *********/
 int main(int argc, char **argv)
@@ -53,6 +54,7 @@ int main(int argc, char **argv)
    scanf("%d", &n);
 
    milnep(x, y, delx, n+4, ydash);  //Calling function
+   milnec(x, y, delx, ydash, n+4);  //Calling function
    exit(0);
 }
 
@@ -71,17 +73,33 @@ void milnep(float x[], float y[], float delx, int n, float ydash[])
       y[i] = y[i-4] + (4*delx*(2*ydash[i-3]-ydash[i-2]+2*ydash[i-1]))/3;
       x[i] = x[i-1] + delx;
       ydash[i] = dybydx(x[i], y[i]);
-      printf("x%d = %f and y%d = %f\n", i+1, x[i], i+1, y[i]);
+      printf("x%d = %f and y%d = %f\n", i, x[i], i, y[i]);
       i++;  //Incrementing i
    }
 
    return ;  //returning void
 }
 
+void milnec(float x[], float y[], float delx, float ydash[], int n)
+{
+   int        i = 4;  //Declaration of variables in int
+   float      ycheck; //Declaration of variables in float
+
+   printf("\nBy corrector's method: \n");
+   while (i < n)
+   {
+      ycheck = y[i-2] + delx*(ydash[i-2]+4*ydash[i-1]+ydash[i])/3;
+      printf("y%d = %f\n", i, ycheck);
+      i++;  //Incrementing i
+   }
+
+   return ;
+}
+
 float dybydx(float x, float y)
 {
    float        fx;  //Declaration of variables in float
 
-   fx = x + y;  //Equation
+   fx = y+3*x-x*x;  //Equation
    return fx;   //returning float
 }

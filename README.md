@@ -87,6 +87,12 @@ In this directory, you can find some algorithm for solving system of equations.
 *LU Decomposition:*
     Decomposes the given matrix into lower and upper triangular matrices and finds the solution by backward-subsitution followed by forward-subsitution.
 
+*Gauss-jacobi:*
+    This is a iterative method for finding the roots by taking initial values as input, this can be done in two ways using matrices and other is normal solving.
+
+*Gauss-seidel:*
+    This is similar to the jacobi method instead using the older values it uses the recently computed roots in the same iteration for more accuracy.
+
 **Ordinary Differential Equations**
 
 In this directory, you can find some algorithms for getting the data-points for some of the Differential Equations.
@@ -96,6 +102,12 @@ In this directory, you can find some algorithms for getting the data-points for 
 
 *Improved Euler Method:*
     The inputs are same as the euler's method but it takes some more iterations to finalize each value at yi to more accurate results simply it follows as a iterative method.
+
+*Picard's Method:*
+    In this method, we compute the recursive integration in the given initial values and find out the given integral value at the given point.
+
+*Milne's Method:*
+    For this method we assume that we alraedy know three consecutive values and use the newton divided difference formula to predict the approximte value of y in terms of y' and check by using the correctors formula.
 
 *Runge-kutta Method:*
     The inputs are same as the euler's method in this it computes the function value at each increment based on the slope at different points of the curve.

@@ -67,6 +67,9 @@ In this directory, you can find some algorithm for integration when given an int
 *Simphson's 1/3 rule*
     This program takes the limits of the interval and computes the integration the given static function using simphson's 1/3 rule.
 
+*Simphson's 3/8 rule*
+    This program takes the limits of the interval and computes the integration the given static function using simphson's 3/8 rule.
+
 *Trapezoidal rule*
     This program takes the limits of the interval and computes the integration t
 he given static function using trapezoidal's rule.

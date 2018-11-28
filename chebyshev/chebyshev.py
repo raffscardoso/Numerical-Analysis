@@ -15,7 +15,7 @@ def fdd(x):
 def chebyshev(guess):
     i = 0
     while True:
-        root = guess-(f(guess)/fd(guess))-(f(guess)**2*fd(guess)/(fd(guess)**3))
+        root = guess-f(guess)/fd(guess)-(f(guess)**2*fd(guess)/(2*fd(guess)**3))
         print(f"Root after iteration {i+1} is {root}.")
         tmp1 = round(root, 9)
         tmp2 = round(guess, 9)

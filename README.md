@@ -79,13 +79,13 @@ he given static function using trapezoidal's rule.
 In this directory, you can find some algorithm for solving system of equations.
 
 *Gauss-Elimination:*
-    This program takes the co-efficients of x,y,z and constant of n system of equation and oredr of the matrix as input and computes the solution by reducing the matrix into a upper triangular matrix.
+    This program takes the co-efficients of x,y,z and constant of n system of equations and order of the matrix as input and computes the solution by reducing the matrix into a upper triangular matrix.
 
 *Gauss-Jordan Elimination:*
-    This program takes the co-efficients of x,y,z and constant of n system of equation and oredr of the matrix as input and computes the solution by reducing the matrix into a diagonal matrix.
+    This program takes the co-efficients of x,y,z and constant of n system of equations and order of the matrix as input and computes the solution by reducing the matrix into a diagonal matrix.
 
 *Inverse using Gauss-Jordan Elimination:*
-    This program takes the co-efficients of x,y,z of n system of equation and oredr of the matrix as input and finds the inverse of the matrix.
+    This program takes the co-efficients of x,y,z of n system of equations and order of the matrix as input and finds the inverse of the matrix.
 
 *LU Decomposition:*
     Decomposes the given matrix into lower and upper triangular matrices and finds the solution by backward-subsitution followed by forward-subsitution.

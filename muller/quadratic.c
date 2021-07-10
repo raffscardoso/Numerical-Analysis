@@ -93,7 +93,7 @@ void muller1(float co_a, float co_b, float co_c, float a, float b, float c)
          break;  //Getting out of the loop
       }
 
-      if (fabs(lamda1) < fabs(lamda))
+      if (fabsf(lamda1) < fabsf(lamda))
       {
          lamda = lamda1;
       }
